@@ -1,4 +1,4 @@
-# Extend Objects for Node.js 
+# extend() objects for Node.js 
 
 extend-fn is sel written method to extend objects recursively 
 
@@ -14,7 +14,7 @@ npm install extend-fn
 
 ## Usage
 
-**Syntax:** extend **(** [`deep`], `target`, `object1`, [`objectN`] **)**
+**Syntax:** extend **(** `target`, `object` **)**
 
 *Extend one object with an other, returning the result object.*
 
