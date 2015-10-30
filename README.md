@@ -1,8 +1,8 @@
 # extend() objects for Node.js 
 
-extend-fn is sel written method to extend objects recursively 
+extend-fn is self written method to extend objects recursively.
 
-These objects can only have functions as properties.
+These objects can also have functions as properties.
 
 This implementation of this extend method is due to a personal use in a project i am working on. All other extend node modules could not extend an object with other tha includes functions as properties. 
 
