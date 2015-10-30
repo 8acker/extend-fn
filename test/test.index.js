@@ -125,11 +125,11 @@ describe("Extend", function () {
         var defaults = null;
 
         var options = {
-            a : "bla"
+            a: "bla"
         };
 
         var expected_result = {
-            a : "bla"
+            a: "bla"
         };
 
         var result = extend(defaults, options);
@@ -137,6 +137,48 @@ describe("Extend", function () {
         var expected_result_string = jsonfn.stringify(expected_result).replace(/\s/g, "");
 
         assert.equal(result_string, expected_result_string);
+    });
+
+    it('check extend with more than one object', function () {
+        var to = {
+            x: function () {
+                return true;
+            }
+        };
+
+        var obj1 = {
+            x: function() {
+                return false;
+            },
+            y: 1
+        };
+
+        var obj2 = {
+            x: function() {
+                return "hello world";
+            },
+            z: 1
+        };
+
+        var obj3 = {
+            x: function() {
+                return "i am final";
+            },
+            z: 2,
+            w: 'i am a word'
+        };
+
+        var expected = {
+            x: function() {
+                return "i am final";
+            },
+            y: 1,
+            z: 2,
+            w: 'i am a word'
+        };
+
+        var result = extend(to, obj1, obj1, obj3);
+        assert.equal(jsonfn.stringify(result), jsonfn.stringify(expected));
     });
 });
 

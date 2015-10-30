@@ -2,7 +2,9 @@
 
 extend-fn is sel written method to extend objects recursively 
 
-These objects can only have functions as properties
+These objects can only have functions as properties.
+
+This implementation of this extend method is due to a personal use in a project i am working on. All other extend node modules could not extend an object with other tha includes functions as properties. 
 
 ## Installation
 
@@ -14,9 +16,9 @@ npm install extend-fn
 
 ## Usage
 
-**Syntax:** extend **(** `target`, `object` **)**
+**Syntax:** extend **(** `target`, `object1`, [`objectN`] **)**
 
-*Extend one object with an other, returning the result object.*
+*Extend one object with one or more other objects, returning the result object.*
 
 **Example:**
 
@@ -25,7 +27,7 @@ var extend = require('extend-fn');
 var result = extend(target, object);
 ```
 
-Keep in mind that the result if the object, that will be returned from extend().
+Keep in mind that the result is the object, that will be returned from extend().
 
 
 [travis-svg]: https://travis-ci.org/justmoon/node-extend.svg

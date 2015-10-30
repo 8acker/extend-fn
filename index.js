@@ -22,10 +22,18 @@ var iterate = function (to, from) {
     return to;
 };
 
-var extend = function (to, from) {
+var extend_one = function (to, from) {
     var obj = {};
     objectAssign(obj, to);
     return iterate(obj, from);
+};
+
+var extend = function(to) {
+    var temp = {};
+    for(var i = 1; i < arguments.length; i++) {
+        temp = extend_one(temp, arguments[i]);
+    }
+    return extend_one(to, temp);
 };
 
 module.exports = extend;
