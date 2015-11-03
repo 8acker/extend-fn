@@ -150,7 +150,11 @@ describe("Extend", function () {
             x: function() {
                 return false;
             },
-            y: 1
+            y: {
+                i: function() {
+                    return true;
+                }
+            }
         };
 
         var obj2 = {
@@ -165,6 +169,12 @@ describe("Extend", function () {
                 return "i am final";
             },
             z: 2,
+            y: {
+                i: function() {
+                    return false;
+                },
+                j: 23
+            },
             w: 'i am a word'
         };
 
@@ -172,12 +182,17 @@ describe("Extend", function () {
             x: function() {
                 return "i am final";
             },
-            y: 1,
+            y: {
+                i: function() {
+                    return false;
+                },
+                j: 23
+            },
             z: 2,
             w: 'i am a word'
         };
 
-        var result = extend(to, obj1, obj1, obj3);
+        var result = extend(to, obj1, obj2, obj3);
         assert.equal(jsonfn.stringify(result), jsonfn.stringify(expected));
     });
 });
