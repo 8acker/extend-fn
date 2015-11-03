@@ -141,16 +141,16 @@ describe("Extend", function () {
 
     it('check extend with more than one object', function () {
         var to = {
-            x: function () {
+            property_x: function () {
                 return true;
             }
         };
 
         var obj1 = {
-            x: function() {
+            property_x: function() {
                 return false;
             },
-            y: {
+            property_y: {
                 i: function() {
                     return true;
                 }
@@ -158,38 +158,38 @@ describe("Extend", function () {
         };
 
         var obj2 = {
-            x: function() {
+            property_x: function() {
                 return "hello world";
             },
-            z: 1
+            property_z: 1
         };
 
         var obj3 = {
-            x: function() {
+            property_x: function() {
                 return "i am final";
             },
-            z: 2,
-            y: {
+            property_z: 2,
+            property_y: {
                 i: function() {
                     return false;
                 },
                 j: 23
             },
-            w: 'i am a word'
+            property_w: 'i am a word'
         };
 
         var expected = {
-            x: function() {
+            property_x: function() {
                 return "i am final";
             },
-            y: {
+            property_y: {
                 i: function() {
                     return false;
                 },
                 j: 23
             },
-            z: 2,
-            w: 'i am a word'
+            property_z: 2,
+            property_w: 'i am a word'
         };
 
         var result = extend(to, obj1, obj2, obj3);
