@@ -1,7 +1,7 @@
 {
   "name": "extend-fn",
   "version": "0.0.1",
-  "description": "Extend json object with other objects that could also have functions as prperties",
+  "description": "Extend json objects with functions as prperties",
   "main": "index.js",
   "dependencies": {
     "json-fn": "^0.60.0",
@@ -12,5 +12,23 @@
   },
   "scripts": {
     "test": "mocha --reporter spec test/*.js"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "yes"
+  },
+  "keywords": [
+    "extend",
+    "json",
+    "object",
+    "other",
+    "objects",
+    "functions",
+    "prperties"
+  ],
+  "author": "Thami Bouchnafa <thami.bouchnafa@gmail.com> (http://github.com/tbouchnafa)",
+  "license": "MIT"
 }

@@ -8,7 +8,7 @@ This implementation of this extend method is due to a personal use in a project 
 
 ## Installation
 
-This package will available on [npm][npm-url] as: extend-fn
+This package is availabe on [npm][npm-url] as: extend-fn
 
 ``` sh
 npm install extend-fn
