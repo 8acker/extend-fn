@@ -173,7 +173,9 @@ describe("Extend", function () {
                 i: function() {
                     return false;
                 },
-                j: 23
+                j: {
+                    p: "i have to be there"
+                }
             },
             property_w: 'i am a word'
         };
@@ -186,7 +188,9 @@ describe("Extend", function () {
                 i: function() {
                     return false;
                 },
-                j: 23
+                j: {
+                    p: "i have to be there"
+                }
             },
             property_z: 2,
             property_w: 'i am a word'

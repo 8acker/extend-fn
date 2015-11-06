@@ -1,11 +1,10 @@
 {
   "name": "extend-fn",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extend json objects with functions as prperties",
   "main": "index.js",
   "dependencies": {
-    "json-fn": "^0.60.0",
-    "object-assign": "^4.0.1"
+    "json-fn": "^0.60.0"
   },
   "devDependencies": {
     "mocha": "^2.3.3"
