@@ -3,8 +3,7 @@
   "version": "0.0.4",
   "description": "Extend json objects with other also with functions as properties",
   "main": "index.js",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "mocha": "^2.3.3",
     "json-fn": "^0.60.0"
@@ -17,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tbouchnafa/extend-fn.git"
+    "url": "git+https://github.com/tbouchnafa/extend-fn.git"
   },
   "keywords": [
     "extend",
@@ -29,5 +28,9 @@
     "properties"
   ],
   "author": "Thami Bouchnafa <thami.bouchnafa@gmail.com> (https://github.com/tbouchnafa)",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tbouchnafa/extend-fn/issues"
+  },
+  "homepage": "https://github.com/tbouchnafa/extend-fn#readme"
 }
