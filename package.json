@@ -4,10 +4,10 @@
   "description": "Extend json objects with other also with functions as properties",
   "main": "index.js",
   "dependencies": {
-    "json-fn": "^0.60.0"
   },
   "devDependencies": {
-    "mocha": "^2.3.3"
+    "mocha": "^2.3.3",
+    "json-fn": "^0.60.0"
   },
   "scripts": {
     "test": "mocha --reporter spec test/*.js"
@@ -26,8 +26,8 @@
     "other",
     "objects",
     "functions",
-    "prperties"
+    "properties"
   ],
-  "author": "Thami Bouchnafa <thami.bouchnafa@gmail.com> (http://github.com/tbouchnafa)",
+  "author": "Thami Bouchnafa <thami.bouchnafa@gmail.com> (https://github.com/tbouchnafa)",
   "license": "MIT"
 }
