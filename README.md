@@ -1,5 +1,7 @@
 # extend() objects for Node.js 
 
+[![Coverage Status](https://coveralls.io/repos/tbouchnafa/extend-fn/badge.svg?branch=master&service=github)](https://coveralls.io/github/tbouchnafa/extend-fn?branch=master)
+
 extend-fn is self written method to extend objects recursively.
 
 These objects can also have functions as properties.
