@@ -98,7 +98,7 @@ describe("Extend", function () {
         var defaults = {
             x: {
                 y: function () {
-                    return 'Honk'
+                    return 'Honk';
                 }
             }
         };
@@ -108,7 +108,7 @@ describe("Extend", function () {
         var expected_result = {
             x: {
                 y: function () {
-                    return 'Honk'
+                    return 'Honk';
                 }
             }
         };

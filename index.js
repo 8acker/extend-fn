@@ -23,7 +23,7 @@ var iterate = function (to, from) {
 var extend_one = function (to, from) {
     var obj = {};
     for(var key in to) {
-        obj[key] = to[key]
+        obj[key] = to[key];
     }
     return iterate(obj, from);
 };
