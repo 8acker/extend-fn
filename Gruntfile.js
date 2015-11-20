@@ -2,34 +2,68 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         jshint: {
-            files: ['Gruntfile.js', './index.js', 'test/**/*.js'],
+            all: ['Gruntfile.js', 'index.js', 'lib/**/*.js', 'test/**/*.js'],
             options: {
-                globals: {
-                    jQuery: true
-                }
+                jshintrc: '.jshintrc',
+                reporter: require('jshint-stylish')
             }
         },
         watch: {
-            files: ['<%= jshint.files %>'],
-            tasks: ['jshint']
+            gruntfile: {
+                files: 'Gruntfile.js',
+                tasks: ['jshint']
+            },
+            test: {
+                files: 'test/*js',
+                tasks: ['test']
+            }
         },
+        mochaTest: {
+            test: {
+                options: {
+                    reporter: 'spec',
+                    require: 'coverage/blanket'
+                },
+                src: ['test/**/*.js']
+            },
+            "html-cov": {
+                options: {
+                    reporter: 'html-cov',
+                    quiet: true,
+                    captureFile: 'coverage.info'
+                },
+                src: ['test/**/*.js']
+            },
+            "travis-cov": {
+                options: {
+                    reporter: 'travis-cov'
+                },
+                src: ['test/**/*.js']
+            }
+        },
+
         coveralls: {
             options: {
                 force: false
             },
+
             target: {
-                src: ['./index.js', './test/test.index.js'],
-                options: {
-                    // Any options for just this target
-                }
+                src: 'coverage.info'
             }
         }
     });
 
+    grunt.loadTasks('tasks');
+
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-mocha-test');
     grunt.loadNpmTasks('grunt-coveralls');
+    grunt.loadNpmTasks('grunt-exec');
 
     grunt.registerTask('lint', ['jshint']);
+    grunt.registerTask('test', ['jshint', 'mochaTest']);
+    grunt.registerTask('cover', ['coveralls']);
+    grunt.registerTask('default', ['test']);
 
 };

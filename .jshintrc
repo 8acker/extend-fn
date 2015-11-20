@@ -1,0 +1,8 @@
+{
+  "globals": {
+    "jQuery": true
+  },
+  "smarttabs": true,
+  "esnext": true,
+  "shadow": true
+}

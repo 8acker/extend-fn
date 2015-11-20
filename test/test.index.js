@@ -1,5 +1,5 @@
 var assert = require("assert");
-var extend = require("../index");
+var extend = require("../lib/extend");
 var jsonfn = require('json-fn');
 
 describe("Extend", function () {
