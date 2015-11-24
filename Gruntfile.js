@@ -30,16 +30,6 @@ module.exports = function(grunt) {
             }
         },
 
-        coveralls: {
-            options: {
-                force: false
-            },
-
-            target: {
-                src: 'coverage.info'
-            }
-        },
-
         mochacov: {
             coverage: {
                 options: {
