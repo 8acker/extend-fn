@@ -1,6 +1,6 @@
 # extend() objects for Node.js 
 
-[![Coverage Status](https://coveralls.io/repos/tbouchnafa/extend-fn/badge.svg?branch=master&service=github)](https://coveralls.io/github/tbouchnafa/extend-fn?branch=master)
+[![Coverage Status](https://coveralls.io/repos/tbouchnafa/extend-fn/badge.svg?branch=master&service=github)](https://coveralls.io/github/tbouchnafa/extend-fn?branch=master) [![Dependency Status][david-image]][david] [![devDependency Status][david-dev-image]][david-dev]
 
 extend-fn is self written method to extend objects recursively.
 
@@ -109,3 +109,17 @@ var result = extend(to, obj1, obj2, obj3);
 [npm-url]: https://npmjs.org/package/extend-fn
 [mit-license-url]: http://opensource.org/licenses/MIT
 [github-tbouchnafa]: https://github.com/tbouchnafa
+[Mocha]: http://mochajs.org/
+[Grunt]: http://gruntjs.com/
+[Blanket]: http://blanketjs.org/
+[Coveralls]: https://coveralls.io
+[Getting Started]: http://gruntjs.com/getting-started
+[grunt-mocha-cli]: https://github.com/Rowno/grunt-mocha-cli
+[travis]: https://travis-ci.org/mmoulton/grunt-mocha-cov
+[travis-image]: https://img.shields.io/travis/mmoulton/grunt-mocha-cov/master.svg?style=flat
+[coveralls]: https://coveralls.io/r/mmoulton/grunt-mocha-cov
+[coveralls-image]: https://img.shields.io/coveralls/mmoulton/grunt-mocha-cov/master.svg?style=flat
+[david]: https://david-dm.org/tbouchnafa/extend-fn
+[david-image]: https://img.shields.io/david/tbouchnafa/extend-fn.svg?style=flat
+[david-dev]: https://david-dm.org/tbouchnafa/extend-fn#info=devDependencies
+[david-dev-image]: https://img.shields.io/david/dev/tbouchnafa/extend-fn.svg?style=flat
