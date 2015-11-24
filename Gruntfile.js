@@ -1,3 +1,5 @@
+"use strict";
+
 module.exports = function(grunt) {
 
     grunt.initConfig({
@@ -42,11 +44,6 @@ module.exports = function(grunt) {
             coverage: {
                 options: {
                     coveralls: true
-                }
-            },
-            test: {
-                options: {
-                    reporter: 'spec'
                 }
             },
             options: {

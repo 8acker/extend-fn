@@ -1,3 +1,5 @@
+"use strict";
+
 var assert = require("assert");
 var extend = require("../index");
 var jsonfn = require('json-fn');

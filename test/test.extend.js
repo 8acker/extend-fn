@@ -1,3 +1,5 @@
+"use strict";
+
 var assert = require("assert");
 var extend = require("../lib/extend");
 var jsonfn = require('json-fn');
@@ -21,11 +23,11 @@ describe("Extend", function () {
             },
             sitemap: {
                 filter: {
-                    segment: function (segment) {
+                    segment: function () {
                         return false;
                     }
                 },
-                extend: function (sitemap) {
+                extend: function () {
                     return;
                 }
             }
@@ -73,7 +75,7 @@ describe("Extend", function () {
             },
             sitemap: {
                 filter: {
-                    segment: function (segment) {
+                    segment: function () {
                         return false;
                     }
                 },
