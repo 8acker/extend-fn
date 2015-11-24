@@ -18,25 +18,11 @@ module.exports = function(grunt) {
                 tasks: ['test']
             }
         },
+
         mochaTest: {
             test: {
                 options: {
-                    reporter: 'spec',
-                    require: 'coverage/blanket'
-                },
-                src: ['test/**/*.js']
-            },
-            "html-cov": {
-                options: {
-                    reporter: 'html-cov',
-                    quiet: true,
-                    captureFile: 'coverage.info'
-                },
-                src: ['test/**/*.js']
-            },
-            "travis-cov": {
-                options: {
-                    reporter: 'travis-cov'
+                    reporter: 'spec'
                 },
                 src: ['test/**/*.js']
             }
@@ -50,20 +36,38 @@ module.exports = function(grunt) {
             target: {
                 src: 'coverage.info'
             }
+        },
+
+        mochacov: {
+            coverage: {
+                options: {
+                    coveralls: true
+                }
+            },
+            test: {
+                options: {
+                    reporter: 'spec'
+                }
+            },
+            options: {
+                files: 'test/**/*.js',
+                coveralls: {
+                    repoToken: 'EoKkudrBvR55F6dno8qxmCz5h1FN6V92H'
+                }
+            }
         }
     });
-
-    grunt.loadTasks('tasks');
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha-test');
-    grunt.loadNpmTasks('grunt-coveralls');
-    grunt.loadNpmTasks('grunt-exec');
+    grunt.loadNpmTasks('grunt-mocha-cov');
 
     grunt.registerTask('lint', ['jshint']);
-    grunt.registerTask('test', ['jshint', 'mochaTest']);
-    grunt.registerTask('cover', ['coveralls']);
-    grunt.registerTask('default', ['test']);
+    grunt.registerTask('travis', ['mochacov:coverage']);
+    grunt.registerTask('test', ['mochaTest']);
+
+    grunt.registerTask('default', ['lint', 'test', 'travis']);
+
 
 };

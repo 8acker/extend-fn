@@ -1,7 +1,7 @@
 {
   "name": "extend-fn",
   "version": "0.0.4",
-  "description": "Extend json objects with other also with functions as properties",
+  "description": "Extend json objects with others that could also have functions as properties",
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {
@@ -9,13 +9,11 @@
     "grunt": "^0.4.5",
     "grunt-contrib-jshint": "^0.11.3",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-coveralls": "^1.0.0",
-    "grunt-exec": "^0.4.6",
+    "grunt-mocha-cov": "^0.4.0",
     "grunt-mocha-test": "^0.12.7",
     "jshint-stylish": "^2.1.0",
     "json-fn": "^0.60.0",
-    "mocha": "^2.3.3",
-    "travis-cov": "^0.2.5"
+    "mocha": "^2.3.3"
   },
   "scripts": {
     "test": "grunt"
@@ -41,5 +39,12 @@
   "bugs": {
     "url": "https://github.com/tbouchnafa/extend-fn/issues"
   },
-  "homepage": "https://github.com/tbouchnafa/extend-fn#readme"
+  "homepage": "https://github.com/tbouchnafa/extend-fn#readme",
+  "config": {
+    "blanket": {
+      "pattern": [
+        "lib"
+      ]
+    }
+  }
 }
