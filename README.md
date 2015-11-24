@@ -1,13 +1,14 @@
 # Grunt Mocha Test Coverage
 [![Build Status][travis-image]][travis] [![Coverage Status](https://coveralls.io/repos/tbouchnafa/extend-fn/badge.svg?branch=master&service=github)](https://coveralls.io/github/tbouchnafa/extend-fn?branch=master) [![Dependency Status][david-image]][david] [![devDependency Status][david-dev-image]][david-dev]
 
+
+# extend() objects for Node.js 
+
 extend-fn is self written method to extend objects recursively.
 
 These objects can also have functions as properties.
 
 This implementation of this extend method is due to a personal use in a project i am working on. All other extend node modules could not extend an object with other that has functions as properties. 
-
-# extend() objects for Node.js 
 
 ## Installation
 
