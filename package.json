@@ -1,6 +1,6 @@
 {
   "name": "extend-fn",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Extend json objects with others that could also have functions as properties",
   "main": "index.js",
   "dependencies": {},

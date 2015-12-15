@@ -10,7 +10,7 @@ describe("Extend", function () {
 
         var defaults = {
             screenshot: {
-                make: false,
+                make: true,
                 condition: function () {
                     return true;
                 }
@@ -35,6 +35,7 @@ describe("Extend", function () {
 
         var options = {
             screenshot: {
+                make: false,
                 condition: function () {
                     return false;
                 }
